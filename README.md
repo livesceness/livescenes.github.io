@@ -1,6 +1,6 @@
 # LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control
 
-### [Paper](~) | [Project Page](https://livescenes.github.io) | [Video](https://youtu.be/Or-yvKHUrZ0)
+### [Paper](~) | [Project Page](https://livescenes.github.io) | [Video](https://youtu.be/)
 
 > LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control <br />
 > Anonymous

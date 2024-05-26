@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta
+    content="Dynalang leverages diverse types of language to solve tasks by using language to predict the future in a multimodal world model."
+    name="description" />
+  <meta content="LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control"
+    property="og:title" />
+  <meta
+    content="Dynalang leverages diverse types of language to solve tasks by using language to predict the future in a multimodal world model."
+    property="og:description" />
+  <meta content="https://dynalang.github.io/data/open_graph.png" property="og:image" />
+  <meta content="LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control"
+    property="twitter:title" />
+  <meta
+    content="Dynalang leverages diverse types of language to solve tasks by using language to predict the future in a multimodal world model."
+    property="twitter:description" />
+  <meta name="twitter:site" content="@realJessyLin" />
+  <meta name="twitter:creator" content="@realJessyLin" />
+  <meta content="https://dynalang.github.io/data/open_graph.png" property="twitter:image" />
+  <meta property="og:type" content="website" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+  <title>LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z7HCWJNBC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-9Z7HCWJNBC');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Source+Sans+3:wght@400;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Source+Sans+3:wght@400;700&display=swap">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="title-row">
+        <h1 class="title">LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and
+          Control<h1>
+      </div>
+      <div class="row">
+        <div class="author-col">
+          <a href="https://livescenes.github.io/" target="_blank" class="author-text">
+            Anonymized Author
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- <p id="uc-berkeley">xxx University, xxx AI Laboratory</h1> -->
+  <div class="row button-row">
+    <a class="link-button" href="https://arxiv.org/abs/" target="_blank" class="link-block">Paper</a>
+    <a class="link-button" href="https://github.com/livescenes/livescenes.github.io" class="link-block">Code</a>
+    <a class="link-button" href="https://www.youtube.com/watch?" class="link-block">YouTube</a>
+  </div>
+  <p class="tldr">
+    <b>TL;DR</b>:
+    Embedding language to interactive physical scenes, grounding and manipulating interactable objects with language
+    instructions; Interactive Dataset;
+  </p>
+  <!-- <video id="main-video" muted autoplay controls playsinline loop>
+      <source id="mp4" src="https://www.youtube.com/embed/Or-yvKHUrZ0" type="video/mp4">
+    </video> -->
+    
+  <!-- <iframe id="main-video" height="404.9" src="static/video/livescene_dataset.mp4" title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe> -->
+
+  <div id="content">
+    <h2 class="section-header">Overview</h2>
+    <div class="paragraph">
+      <p>
+        This paper aims to advance the progress of physical world interactive scene reconstruction by extending the
+        interactive object reconstruction from single object level to complex scene level. To this end, we first
+        construct one simulated and one real scene-level physical interaction dataset containing 28 scenes with multiple
+        interactive objects per scene. Furthermore, to accurately model the interactive motions of multiple objects in
+        complex scenes, we propose LiveScene, the first scene-level language-embedded interactive neural radiance field
+        that efficiently reconstructs and controls multiple interactive objects in complex scenes. LiveScene introduces
+        an efficient factorization that decomposes the interactive scene into multiple local deformable fields to
+        separately reconstruct individual interactive objects, achieving the first accurate and independent control on
+        multiple interactive objects in a complex scene. Moreover, we introduce an interaction-aware language embedding
+        method that generates varying language embeddings to localize individual interactive objects under different
+        interactive states, enabling arbitrary control of interactive objects using natural language. Finally, we
+        evaluate LiveScene on the constructed datasets OminiSim and InterReal with various simulated and real-world
+        complex scenes. Extensive experiment results demonstrate that the proposed approach achieves SOTA novel view
+        synthesis and language grounding performance, surpassing existing methods by +9.89, +1.30, and +1.99 in PSNR on
+        CoNeRF Synthetic, OminiSim #chanllenging, and InterReal #chanllenging datasets, and +65.12 of mIOU on OminiSim,
+        respectively.
+      </p>
+      <div class="img-container">
+        <img class="wide-img" src="static/image/compare.png" alt="motivation">
+      </div>
+      <p><b>Contributions:</b></p>
+      <ul>
+        <li> We introduce <b>the first scene-level language embedded interactive</b> radiance field that
+          efficiently reconstructs and controls complex physical scenes, allowing for the control of multiple
+          interactive objects within the neural scene with diverse interaction variations and even facilitating
+          language-based interaction.
+
+        <li> We propose a factorization and sampling technique that decomposes interactive scenes into local deformable
+          fields and samples the interaction-relevant 3D points to control individual interactive objects in a complex
+          scene. Furthermore, we introduce an interaction-relevant language embedding method that generates
+          interaction-relevant varying language embeddings to localize and control interactive objects.
+
+        <li> We construct the first scene-level physical interaction dataset <b>OminiSim</b> and <b>InterReal</b>,
+          containing <b>subsets and 70 interactive objects</b> for evaluation. Extensive experiments demonstrate that
+          the proposed approach achieves SOTA performance in various tasks such as novel view synthesis, video frame
+          interpolation, and scene interactive control, showcasing robust interaction capabilities.
+      </ul>
+    </div>
+
+    <!-- <h2 class="section-header">Motivation</h2>
+    <div class="img-container">
+      <div class="paragraph">
+        xxx
+      </div>
+      <img class="wide-img" src="static/images/motivation.png" alt="motivation">
+      <div class="paragraph">
+        xxx
+      </div>
+    </div> -->
+
+    <h2 class="section-header">Overview</h2>
+    <div class="img-container">
+      <div class="paragraph">
+        The overview of <b>LiveScene</b>. Given a camera view and control variable \(\boldsymbol{\kappa}\) of one
+        specific interactive object, a series 3D points are sampled in a local deformable field that models the
+        interactive motions of this specific interactive object, and then the interactive object with novel interactive
+        motion state is generated via volume-rendering. Moreover, an interaction-aware language embedding is utilized to
+        localize and control individual interactive objects using natural language.
+      </div>
+      <img class="wide-img" src="static/image/pipeline.png" alt="motivation">
+      <div class="paragraph">
+
+      </div>
+    </div>
+
+    <h2 class="section-header">Interactive Dataset</h2>
+    <div class="img-container">
+      <div class="paragraph">
+        To our knowledge, existing view synthetic datasets for interactive scene rendering are primarily limited to a few interactive objects, making it impractical to scale up to real scenarios involving multi-object interactions. To bridge this gap, we construct two scene-level, high-quality annotated datasets to advance research progress in reconstructing and understanding interactive scenes: <b>OminiSim</b> and <b>InterReal</b>, containing 28 subsets and 70 interactive objects with 2 Million samples, providing RGBD images, camera trajectory, interactive object masks, prompts captions, and corresponding object state quantities at each time step:
+      </div>
+      <iframe id="main-video" height="404.9" src="static/video/livescene_dataset.mp4" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    </div>
+
+    <h2 class="section-header">Citation</h2>
+    <div class="citation">
+      <pre id="codecell0">
+        If you use this work or find it helpful, please consider citing: (bibtex)
+        @Manual{,
+          title = {LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control},
+          author = {Anonymous},
+          year = {2024},
+          url = {https://livescenes.github.io},
+        }
+        </pre>
+    </div>
+
+    <br><br>
+    <div class="paragraph-center">For more information, check out the paper, code, and YouTube video:</div>
+    <div class="row button-row">
+      <a class="link-button" href="https://arxiv.org/abs/" target="_blank" class="link-block">Paper</a>
+      <a class="link-button" href="https://github.com/livescenes/livescenes.github.io" class="link-block">Code</a>
+      <a class="link-button" href="https://www.youtube.com/watch?" class="link-block">YouTube</a>
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
