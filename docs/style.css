@@ -8,6 +8,30 @@ body {
     line-height: 20px;
 }
 
+.title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Varela Round',sans-serif;
+  color: #000;
+  font-size: 50px;
+  line-height: 65px;
+  font-weight: 700;
+  letter-spacing: 4;
+  text-align: center;
+}
+
+.subheader {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Open Sans',sans-serif;
+  color: #333;
+  font-size: 25px;
+  line-height: 44px;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: center;
+}
+
 .section {
     width: 60%;
     max-width: 45rem;
@@ -21,7 +45,7 @@ body {
     max-width: 940px;
 }
 
-.title {
+/* .title {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -30,7 +54,7 @@ body {
     font-size: 40px;
     line-height: 40px;
     font-weight: 700;
-}
+} */
 
 .subheader {
     margin-top: 0;
@@ -103,7 +127,7 @@ body {
     color: #333;
     font-weight: 400;
     margin-top: 1rem;
-    margin-bott
+    /* margin-bott */
     letter-spacing: 0;
 }
 
@@ -192,7 +216,7 @@ body {
     line-height: 26px;
     font-weight: 400;
     letter-spacing: 0;
-    text-align: left;
+    text-align: justify;
 }
 
 .paragraph-center {
@@ -271,6 +295,54 @@ li.bubble{
 
 .videos video {
   max-width: 100%;
+}
+
+.video-player{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+}
+
+.video-player video {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.prev-nav, .next-nav {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-nav {
+  left: 10px;
+}
+
+.next-nav {
+  right: 10px;
+}
+
+.video-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-controls button {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+#video-list{
+  display: none;
 }
 
 #opacity {
