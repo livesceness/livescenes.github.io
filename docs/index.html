@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
   <title>LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control</title>
-  <link rel="icon" type="image/webp" href="static/image/favicon.webp">
+  <link rel="icon" type="image/webp" href="static/image/icons/favicon.webp">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Z7HCWJNBC"></script>
   <script>
@@ -38,9 +38,9 @@
   <div class="section">
     <div class="container">
       <h1 class="title">
-        <img src="static/image/favicon.webp" style="height: 60px; margin-bottom: -10px">
+        <img src="static/image/icons/favicon.webp" style="height: 60px; margin-bottom: -10px">
         LiveScene
-        <!-- <img src="static/image/favicon.webp" style="height: 60px; margin-bottom: -10px"> -->
+        <!-- <img src="static/image/icons/favicon.webp" style="height: 60px; margin-bottom: -10px"> -->
       </h1>
       <h1 class="subheader"><b>Language Embedding Interactive Radiance Fields for Physical Scene Rendering and
           Control</b></h1>
@@ -55,24 +55,33 @@
 
     </div>
     <!-- <p id="uc-berkeley">xxx University, xxx AI Laboratory</h1> -->
-    <div class="row button-row">
-      <a class="link-button" href="https://arxiv.org/abs/" target="_blank" class="link-block">Paper</a>
-      <a class="link-button" href="https://github.com/livescenes/livescenes.github.io" class="link-block">Code</a>
-      <a class="link-button" href="https://www.youtube.com/watch?" class="link-block">YouTube</a>
+
+    <div class="grid-container">
+      <a href="https://arxiv.org/abs/" class="grid-item">
+        <image src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/5cab99df4998decfbf9e218e_paper-01.png"
+          height="60px">
+          <h4><strong>Paper</strong></h4>
+      </a>
+      <a href="https://www.youtube.com/watch?" class="grid-item">
+        <image src="static/image/icons/youtube_icon.png" style="border: none;" height="60px">
+          <h4><strong>Video</strong></h4>
+      </a>
+      <a href="https://github.com/livescenes/livescenes.github.io" class="grid-item">
+        <image src="static/image/icons/github_pad.png" height="60px">
+          <h4><strong>Code</strong></h4>
+      </a>
+      <a href="https://drive.google.com/drive/folders/" class="grid-item">
+        <image src="static/image/icons/google-drive.png" height="60px">
+          <h4><strong>Data</strong></h4>
+      </a>
     </div>
+
+
     <p class="tldr">
       <b>TL;DR</b>:
       Embedding language feature to interactive physical scenes, grounding and manipulating interactable objects with
       language instructions; Interaction space factorization; Dataset;
     </p>
-    <!-- <video id="main-video" muted autoplay controls playsinline loop>
-      <source id="mp4" src="https://www.youtube.com/embed/Or-yvKHUrZ0" type="video/mp4">
-    </video> -->
-
-    <!-- <iframe id="main-video" height="404.9" src="static/video/demo.mp4" title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen></iframe> -->
 
     <video id="main-video" style="border-radius: 15px;" autobuffer muted autoplay loop controls>
       <source src="static/video/demo.mp4" type="video/mp4">
@@ -82,13 +91,17 @@
       <h2 class="section-header">Overview</h2>
       <div class="paragraph">
         <p>
-          LiveScene aims to advance the progress of physical world <b>interactive scene reconstruction</b> by extending
+          LiveScene aims to advance the progress of physical world <b>interactive scene reconstruction</b> by
+          extending
           the interactive object reconstruction from <b>single object level</b> to complex <b>scene level</b>. To
           accurately model the interactive motions of multiple objects in complex scenes, LiveScene proposes an
-          <b>efficient factorization</b> that decomposes the interactive scene into multiple local deformable fields to
-          separately reconstruct individual interactive objects, achieving the first accurate and independent control on
+          <b>efficient factorization</b> that decomposes the interactive scene into multiple local deformable fields
+          to
+          separately reconstruct individual interactive objects, achieving the first accurate and independent control
+          on
           multiple interactive objects in a complex scene. Moreover, LiveScene introduces an <b>interaction-aware
-            language embedding</b> method that generates varying language embeddings to localize individual interactive
+            language embedding</b> method that generates varying language embeddings to localize individual
+          interactive
           objects under different interactive states, enabling arbitrary control of interactive objects using natural
           language.
         </p>
@@ -118,7 +131,8 @@
           The overview of <b>LiveScene</b>. Given a camera view and control variable \(\boldsymbol{\kappa}\) of one
           specific interactive object, a series 3D points are sampled in a local deformable field that models the
           interactive motions of this specific interactive object, and then the interactive object with novel
-          interactive motion state is generated via volume-rendering. Moreover, an interaction-aware language embedding
+          interactive motion state is generated via volume-rendering. Moreover, an interaction-aware language
+          embedding
           is utilized
           to localize and control individual interactive objects using natural language.
         </div>
@@ -128,7 +142,8 @@
       <b>Multi-scale Interaction Space Factorization</b>
       <div class="img-container">
         <div class="paragraph">LiveScene maintains mutiple local deformable fields \(\left \{\mathcal{R}_1,
-          \mathcal{R}_2, \cdots \mathcal{R}_\alpha \right \}\) for each interactive object in the 4D space, and project
+          \mathcal{R}_2, \cdots \mathcal{R}_\alpha \right \}\) for each interactive object in the 4D space, and
+          project
           high-dimensional interaction features into a compact multi-scale 4D space. In training, LiveScene denotes a
           feature repulsion loss and to amplify the feature differences between distinct deformable scenes, which
           relieve the boundary ray sampling and feature storage conflicts.
@@ -140,9 +155,11 @@
       <div class="img-container">
         <div class="paragraph">
           LiveScene Leverages the proposed multi-scale interaction space factorization to efficiently store language
-          features in lightweight planes by indexing the maximum probability sampling instead of 3D fields in LERF. For
+          features in lightweight planes by indexing the maximum probability sampling instead of 3D fields in LERF.
+          For
           any sampling point \(\mathbf{p}\), it retrieves local language feature group, and perform bilinear
-          interpolation to obtain a language embedding that adapts to interactive variable changes from surrounding clip
+          interpolation to obtain a language embedding that adapts to interactive variable changes from surrounding
+          clip
           features.
         </div>
         <img class="wide-img" src="static/image/embeds.png" alt="motivation" style="width: 80%;">
@@ -151,7 +168,8 @@
       <h2 class="section-header">Interactive Dataset</h2>
       <div class="img-container">
         <div class="paragraph">
-          to our knowledge, existing view synthetic datasets for interactive scene rendering are primarily limited to a
+          to our knowledge, existing view synthetic datasets for interactive scene rendering are primarily limited to
+          a
           few interactive objects, making it impractical to scale up to real scenarios involving multi-object
           interactions. to bridge this gap, we construct two scene-level, high-quality annotated datasets to advance
           research progress in reconstructing and understanding interactive scenes: <b>ominisim</b> and
@@ -162,10 +180,6 @@
         <video id="main-video" style="border-radius: 15px;" autobuffer muted controls>
           <source src="static/video/livescene_dataset.mp4" type="video/mp4">
         </video>
-        <!-- <iframe id="main-video" src="static/video/livescene_dataset.mp4" title="youtube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe> -->
       </div>
 
       <h2 class="section-header">More Demos</h2>
@@ -185,7 +199,8 @@
             href="https://behavior.stanford.edu/omnigibson/getting_started/installation.html"
             target="_blank">Omnigibson</a>, <a href="https://github.com/Giodiro/kplanes_nerfstudio"
             target="_blank">Kplanes</a>, <a href="https://github.com/kerrj/lerf/" target="_blank">LeRF</a> and <a
-            href="https://github.com/kacperkan/conerf" target="_blank">Conerf</a>. Thanks for making the code available!
+            href="https://github.com/kacperkan/conerf" target="_blank">Conerf</a>. Thanks for making the code
+          available!
           🤗.
         </p>
       </div>
@@ -203,13 +218,13 @@
     </pre>
       </div>
 
-      <br><br>
+      <!-- <br><br>
       <div class="paragraph-center">For more information, check out the paper, code, and YouTube video:</div>
       <div class="row button-row">
         <a class="link-button" href="https://arxiv.org/abs/" target="_blank" class="link-block">Paper</a>
         <a class="link-button" href="https://github.com/livescenes/livescenes.github.io" class="link-block">Code</a>
         <a class="link-button" href="https://www.youtube.com/watch?" class="link-block">YouTube</a>
-      </div>
+      </div> -->
 
     </div>
 
