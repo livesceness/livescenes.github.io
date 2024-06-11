@@ -26,9 +26,6 @@ window.onload = function() {
     loadVideo(currentVideoIndex);
 }
 
-
-
-
 function loadVideo(index) {
     const video = document.getElementById('video');
     const videoSource = videoPaths[index];

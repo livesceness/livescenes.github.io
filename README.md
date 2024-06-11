@@ -27,7 +27,7 @@ We adapt codes from some awesome repositories, including [Nerfstudio](https://gi
 
 If you use this work or find it helpful, please consider citing: (bibtex)
 ```
-@Manual{,
+@Manual{livescenes,
    title = {LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control},
    author = {Anonymous},
    year = {2024},

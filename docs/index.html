@@ -42,8 +42,7 @@
         LiveScene
         <!-- <img src="static/image/icons/favicon.webp" style="height: 60px; margin-bottom: -10px"> -->
       </h1>
-      <h1 class="subheader"><b>Language Embedding Interactive Radiance Fields for Physical Scene Rendering and
-          Control</b></h1>
+      <h1 class="subheader">Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control</h1>
 
       <div class="row">
         <div class="author-col">
@@ -93,7 +92,7 @@
         <p>
           LiveScene aims to advance the progress of physical world <b>interactive scene reconstruction</b> by
           extending
-          the interactive object reconstruction from <b>single object level</b> to complex <b>scene level</b>. To
+          the interactive object reconstruction from single <b>object</b> level to complex <b>scene</b> level. To
           accurately model the interactive motions of multiple objects in complex scenes, LiveScene proposes an
           <b>efficient factorization</b> that decomposes the interactive scene into multiple local deformable fields
           to
@@ -110,7 +109,7 @@
         </div>
         <p><b>Contributions:</b></p>
         <ul>
-          <li> the first <b>scene-level language embedded interactive</b> radiance field that efficiently reconstructs
+          <li> The first <b>scene-level language embedded interactive</b> radiance field that efficiently reconstructs
             and controls complex physical scenes, allowing for the control of multiple interactive objects within the
             neural scene with diverse interaction variations and language instructions.
 
@@ -128,7 +127,7 @@
       <h2 class="section-header">Pipeline</h2>
       <div class="img-container">
         <div class="paragraph">
-          The overview of <b>LiveScene</b>. Given a camera view and control variable \(\boldsymbol{\kappa}\) of one
+          Given a camera view and control variable \(\boldsymbol{\kappa}\) of one
           specific interactive object, a series 3D points are sampled in a local deformable field that models the
           interactive motions of this specific interactive object, and then the interactive object with novel
           interactive motion state is generated via volume-rendering. Moreover, an interaction-aware language
@@ -168,14 +167,13 @@
       <h2 class="section-header">Interactive Dataset</h2>
       <div class="img-container">
         <div class="paragraph">
-          to our knowledge, existing view synthetic datasets for interactive scene rendering are primarily limited to
-          a
-          few interactive objects, making it impractical to scale up to real scenarios involving multi-object
-          interactions. to bridge this gap, we construct two scene-level, high-quality annotated datasets to advance
-          research progress in reconstructing and understanding interactive scenes: <b>ominisim</b> and
+          To our knowledge, existing view synthetic datasets for interactive scene rendering are primarily limited to
+          a few interactive objects, making it impractical to scale up to real scenarios involving multi-object
+          interactions. To bridge this gap, we construct two scene-level, high-quality annotated datasets to advance
+          research progress in reconstructing and understanding interactive scenes: <b>Ominisim</b> and
           <b>interreal</b>, containing 28 subsets and 70 interactive objects with 2 million samples, providing rgbd
-          images, camera trajectory, interactive object masks, prompts captions, and corresponding object state
-          quantities at each time step:
+          images, camera trajectories, interactive object masks, prompt captions, and corresponding object state
+          quantities at each time step.
         </div>
         <video id="main-video" style="border-radius: 15px;" autobuffer muted controls>
           <source src="static/video/livescene_dataset.mp4" type="video/mp4">
@@ -187,7 +185,7 @@
         <p>Click the left and right button on the side of video to preview different scenes.</p>
       </div>
       <div class="video-player">
-        <video id="video" width="100%" style="height: calc(width * 9/16); border-radius: 15px;" muted controls></video>
+        <video id="video" width="100%" autobuffer muted controls></video>
         <button id="prev" class="prev-nav">&#10094;</button>
         <button id="next" class="next-nav">&#10095;</button>
       </div>
@@ -201,7 +199,7 @@
             target="_blank">Kplanes</a>, <a href="https://github.com/kerrj/lerf/" target="_blank">LeRF</a> and <a
             href="https://github.com/kacperkan/conerf" target="_blank">Conerf</a>. Thanks for making the code
           available!
-          🤗.
+          🤗
         </p>
       </div>
 
@@ -209,7 +207,7 @@
       <div class="citation">
         <pre id="codecell0">
   If you use this work or find it helpful, please consider citing: (bibtex)
-  @Manual{,
+  @Manual{livescenes,
     title = {LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control},
     author = {Anonymous},
     year = {2024},
