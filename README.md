@@ -3,7 +3,7 @@
 ### [Paper](https://arxiv.org/abs/2406.16038) | [Project Page](https://livescenes.github.io) | [Video](https://youtu.be/)
 
 > LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control <br />
-> [Delin Qu*](https://delinqu.github.io/), Qizhi Chen*, Pingrui Zhang, Xianqiang Gao, Bin Zhao, Dong Wang, [Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ)
+> Anonymized Author
 > 
 
 <!-- <p align="center">
@@ -29,7 +29,7 @@ If you use this work or find it helpful, please consider citing: (bibtex)
 ```
 @misc{livescene2024,
   title={LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control}, 
-  author={Delin Qu and Qizhi Chen and Pingrui Zhang and Xianqiang Gao and Bin Zhao and Dong Wang and Xuelong Li},
+  author={Anonymized Author},
   year={2024},
   eprint={2406.16038},
   archivePrefix={arXiv},
