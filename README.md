@@ -1,9 +1,9 @@
 # LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control
 
-### [Paper](~) | [Project Page](https://livescenes.github.io) | [Video](https://youtu.be/)
+### [Paper](https://arxiv.org/abs/2406.16038) | [Project Page](https://livescenes.github.io) | [Video](https://youtu.be/)
 
 > LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control <br />
-> Anonymous
+> [Delin Qu*](https://delinqu.github.io/), Qizhi Chen*, Pingrui Zhang, Xianqiang Gao, Bin Zhao, Dong Wang, [Xuelong Li](https://scholar.google.com/citations?user=ahUibskAAAAJ)
 > 
 
 <!-- <p align="center">
@@ -27,10 +27,11 @@ We adapt codes from some awesome repositories, including [Nerfstudio](https://gi
 
 If you use this work or find it helpful, please consider citing: (bibtex)
 ```
-@Manual{livescene2024,
-   title = {LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control},
-   author = {Anonymous},
-   year = {2024},
-   url = {https://livescenes.github.io},
- }
+@misc{livescene2024,
+  title={LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control}, 
+  author={Delin Qu and Qizhi Chen and Pingrui Zhang and Xianqiang Gao and Bin Zhao and Dong Wang and Xuelong Li},
+  year={2024},
+  eprint={2406.16038},
+  archivePrefix={arXiv},
+}
 ```
