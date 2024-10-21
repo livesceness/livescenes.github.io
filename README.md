@@ -16,8 +16,8 @@ This repository contains the code and dataset for the paper **LiveScene: Languag
 
 ## Update
 - [x] Project Pages for LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control [2024-5-18]
+- [x] DATASET for LiveScene
 - [ ] Code for LiveScene
-- [ ] DATASET for LiveScene
 
 ## Acknowledgement
 
