@@ -1,5 +1,8 @@
 # LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control
 
+## 🔥🔥🔥 Code is available at [livescene](https://github.com/Tavish9/livescene).
+## ❗️❗️❗️ Project page has been moved to [livescenes](https://github.com/livescenes/livescenes.github.io).
+
 ### [Paper](https://arxiv.org/abs/2406.16038) | [Project Page](https://livescenes.github.io) | [Video](https://youtu.be/4gqUoCFK_0Q?si=fPY1HHYtUU6D6lkf)
 
 > LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control <br />
@@ -16,9 +19,10 @@ This repository contains the code and dataset for the paper **LiveScene: Languag
 
 ## Update
 - [x] Project Pages for LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control [2024-5-18]
-- [x] DATASET for LiveScene
-- [x] Video and slides
-- [ ] Code for LiveScene
+- [x] DATASET for LiveScene [2024-10-21]
+- [x] Video and slides [2024-11-04]
+- [x] Code for LiveScene [2025-01-09]
+
 
 ## Acknowledgement
 
@@ -30,7 +34,7 @@ If you use this work or find it helpful, please consider citing: (bibtex)
 ```
 @misc{livescene2024,
   title={LiveScene: Language Embedding Interactive Radiance Fields for Physical Scene Rendering and Control}, 
-  author={Anonymized Author},
+  author={Delin Qu*, Qizhi Chen*, Pingrui Zhang, Xianqiang Gao, Bin Zhao, Zhigang Wang, Dong Wang†, Xuelong Li†},
   year={2024},
   eprint={2406.16038},
   archivePrefix={arXiv},
